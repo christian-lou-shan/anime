@@ -55,29 +55,35 @@
 
 <div class="cont max-w-[1500px] mx-auto px-4 py-8">
     <div class="grid md:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-4">
-        <div class="boxxx one relative rounded-xl md:h-[220px] h-[200px]">
+
+        <div id="boxx1" class="boxxx one relative rounded-xl md:h-[220px] h-[200px]">
             <a href="https://www.bilibili.tv/play/2097863" class="absolute top-0 left-0 w-full h-full text-white">
                 <p class="py-4 px-2 text-2xl font-bold">Solo Leveling</p>
             </a>
-            <img class="max-h-[200px] md:max-h-[220px] w-full object-cover rounded-xl" src="solo.png" alt="">
+            <img id="s1" class="max-h-[200px] md:max-h-[220px] w-full object-cover rounded-xl" src="solo.png" alt="">
         </div>
 
-        <div class="boxxx two relative rounded-xl md:h-[220px] h-[200px]">
+        <div id="boxx2" class="boxxx two relative rounded-xl md:h-[220px] h-[200px]">
             <a href="https://www.bilibili.tv/play/37976" class="absolute top-0 left-0 w-full h-full text-white">
                 <p class="py-4 px-2 text-2xl font-bold">One Piece</p>
             </a>
-            <img class="max-h-[200px] md:max-h-[220px] w-full object-cover rounded-xl" src="onepiece.jpeg" alt="">
+            <img id="s2" class="max-h-[200px] md:max-h-[220px] w-full object-cover rounded-xl" src="onepiece.jpeg" alt="">
         </div>
 
-        <div class="boxxx three relative rounded-xl md:h-[220px] h-[200px]">
+        <div id="boxx3" class="boxxx three relative rounded-xl md:h-[220px] h-[200px]">
             <a href="https://www.bilibili.tv/play/34580" class="absolute top-0 left-0 w-full h-full text-white">
                 <p class="py-4 px-2 text-2xl font-bold">Demon Slayer</p>
             </a>
-            <img class="max-h-[200px] md:max-h-[220px] w-full object-cover rounded-xl" src="demon.jpg" alt="">
+            <img id="s3" class="max-h-[200px] md:max-h-[220px] w-full object-cover rounded-xl" src="juju.jpg" alt="">
         </div>
     </div>
-</div>
-    <section>
+   
+
+
+
+
+    
+    <section>   
         <h1 class="text-rose-400 text-center font-bold text-2xl pt-10 text-5xl">Top Anime to watch</h1>
 
         <div class="">
@@ -223,6 +229,52 @@
 
       
     </section>
+
+    <script>
+        var boxx1 = document.querySelector('#boxx1')
+        var boxx2 = document.querySelector('#boxx2')
+        var boxx3 = document.querySelector('#boxx3')
+        var s1 = document.querySelector('#s1')
+        var s2 = document.querySelector('#s2')
+        var s3 = document.querySelector('#s3')
+
+        function LogoHoverAdd(){
+            s1.src="sologif.gif"
+    
+        }
+        function LogoHoverAdd1(){
+           
+            s2.src="zorogif.gif"
+        }
+        function LogoHoverAdd2(){
+           
+           s3.src="jujugif.gif"
+       }
+
+
+        function LogoHoverRemove(){
+            s1.src="solo.png"
+            
+        }
+        function LogoHoverRemove1(){
+           
+            s2.src="onepiece.jpeg"
+        }
+        function LogoHoverRemove2(){
+           
+            s3.src="juju.jpg"
+        }
+
+        boxx1.addEventListener("mouseover", LogoHoverAdd);
+        boxx1.addEventListener("mouseout", LogoHoverRemove);
+        boxx2.addEventListener("mouseover", LogoHoverAdd1);
+        boxx2.addEventListener("mouseout", LogoHoverRemove1);
+        boxx3.addEventListener("mouseover", LogoHoverAdd2);
+        boxx3.addEventListener("mouseout", LogoHoverRemove2);
+    </script>
+
+
+
 </body>
 </html>
 
